@@ -1,0 +1,174 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('Minecraft.ttf') format('truetype');
+
+}
+
+body {
+    font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+h2 {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.h1-container {
+    font-family: 'Minecraft';
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+    /* font-weight: 600; */
+
+}
+
+
+.button-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.day-button {
+
+    display: inline-block; /* Ensure buttons are block elements */
+    width: 200px;
+    height: 80px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 80px; /* Vertically center text */
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none; /* Remove underline */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.day-button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+.day-button:active {
+    background-color: #3e8e41;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .button-container {
+        
+        gap: 15px;
+        max-width: 255px;
+    }
+
+    .day-button {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 320px) {
+    .button-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 100px);
+        gap: 10px;
+        max-width: 200px;
+    }
+
+    .day-button {
+        font-size: 14px;
+        height: 100px;
+    }
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+    color: #000000;
+    font-family: 'Minecraft';
+    
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+thead {
+    background-color: #6c6c6c;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+@media (max-width: 600px) {
+    th, td {
+        padding: 12px 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Optional: Add zebra striping for better readability */
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
